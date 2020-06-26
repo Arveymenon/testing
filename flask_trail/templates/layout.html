@@ -1,0 +1,16 @@
+<div>
+    <h1>{% block title %} 
+        {% endblock %}
+        {{ title }}
+    </h1>
+    <div>
+            {% block body %} {% endblock%}
+        </div>
+
+    <div>
+        Titles Used So Far
+            {% for title in titles %}
+                <h4>{{ title }}</h4>
+            {% endfor %}
+        </div>
+    </div>

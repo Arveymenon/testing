@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+
+
+{% block title %} 
+    Test Title
+{% endblock %}
+
+{% block body %} 
+    {% for question in questions %}
+        {{ question.question }}<br>
+    {% endfor %}
+    <form action="{{ url_for('home') }}" method="POST">
+        <input required name="title" placeholder="Enter Title To Be Replaced">
+        <button>Submit</button>
+    </form>
+{% endblock %}
